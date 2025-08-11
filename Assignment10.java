@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.Map;
 import java.util.NavigableSet;
 import java.util.HashMap;
-
+import java.util.*;
 /*1. Write a Java program
 	a. to create a new array list, add some colors (string) and print out the collection.
 	b. to iterate through all elements in an array list.
@@ -257,15 +257,17 @@ j. compare two hash set. */
 
 class HashSetQues{
 	public static void main(String[] args){
-		HashSet<String> set = new HashSet<>();
+		//HashSet<String> set = new HashSet<>(); Hashset not maintain order
+		LinkedHashSet<String> set = new LinkedHashSet<>();
 		set.add("Java");
 		set.add("Python");
 		set.add("C++");
 		set.add("HTML");
+		set.add("JavaScript");
 		System.out.println("After adding Elements into the Set : " + set);
 		System.out.println("============================");
 	/*OUTPUT 
-	After adding Elements into the Set : [Java, C++, HTML, Python] */
+	After adding Elements into the Set :  [Java, Python, C++, HTML, Java Script] */
 	
     //b.iterate through all elements in a hash list.
         System.out.println("Iterating all elements:");
@@ -922,4 +924,5 @@ New Balance after 5.0% interest: 10500.0
 =====================================   */
         }
     }
+
 }
